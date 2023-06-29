@@ -1,4 +1,4 @@
-![alt text](https://github.com/khakiiman/portfolio/blob/main/src/assets/IntroPic.png?raw=true)
+![alt text](https://github.com/khakiiman/SphereApp/blob/main/public/IntroPic.png?raw=true)
 
 # New ThreeJS Website
 
