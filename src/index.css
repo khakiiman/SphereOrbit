@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  font-family: 'Audiowide', sans-serif;
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+nav {
+  color: white;
+  z-index: 2;
+  position: relative;
+  padding: 4rem 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+nav ul li:hover {
+  color: rgb(228, 71, 71);
+  animation-name: wiggle;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.title {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  font-size: 2rem;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav a:hover {
+  animation-name: wiggle;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.footer {
+  color: wheat;
+  z-index: 2;
+  position: absolute;
+  font-size: 0.9rem;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%, -75%);
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  30%,
+  70% {
+    transform: translateX(-3%);
+  }
+  10%,
+  50%,
+  90% {
+    transform: translateX(3%);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
