@@ -8,24 +8,39 @@
 
 body,
 html {
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: 'Audiowide', sans-serif;
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  gap: 3rem;
+}
+
 .webgl {
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  outline: none;
 }
 
 nav {
-  color: white;
-  z-index: 2;
-  position: relative;
-  padding: 4rem 8rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 2rem 8rem;
+  color: white;
+  z-index: 2;
 }
 
 nav a {
@@ -43,6 +58,30 @@ nav ul {
   font-size: 1.3rem;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: -55%;
+  color: white;
+  z-index: 2;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: -55%;
+  color: wheat;
+  z-index: 2;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
 nav ul li:hover {
   color: rgb(228, 71, 71);
   animation-name: wiggle;
@@ -51,35 +90,11 @@ nav ul li:hover {
   animation-iteration-count: 1;
 }
 
-.title {
-  color: white;
-  z-index: 2;
-  position: absolute;
-  font-size: 2rem;
-  left: 50%;
-  top: 75%;
-  transform: translate(-50%, -75%);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 nav a:hover {
   animation-name: wiggle;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
-}
-
-.footer {
-  color: wheat;
-  z-index: 2;
-  position: absolute;
-  font-size: 0.9rem;
-  left: 50%;
-  top: 95%;
-  transform: translate(-50%, -75%);
-  text-transform: uppercase;
-  letter-spacing: 8px;
 }
 
 @keyframes wiggle {
